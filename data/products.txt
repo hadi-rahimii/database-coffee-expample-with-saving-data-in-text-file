@@ -1,3 +1,2 @@
- Product: اسپرسو , materials: اب ، قهوه , price : 20000
- Product: ice coffee , materials: ice,milk,coffee , price : 50000
-
+ Product: قهوه اسپرسو , materials: قهوه و شکر و اب , price : 20000 , cost : 15000
+ Product: اسپرسو دوبل , materials: قهوه و شکر و اب , price : 30000 , cost : 20000

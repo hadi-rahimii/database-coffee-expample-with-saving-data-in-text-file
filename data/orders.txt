@@ -1,2 +1,7 @@
-Name : حسین, product : ice coffee , price : 50000
-Name : امیر, product : ice coffee , price : 50000
+Name : حسین, product : قهوه اسپرسو , price : 20000  , cost : 15000
+Name : امیر, product : قهوه اسپرسو , price : 20000  , cost : 15000
+Name : علی, product : اسپرسو دوبل , price : 30000  , cost : 20000
+Name : امیر, product : اسپرسو دوبل , price : 30000  , cost : 20000
+Name : هادی, product : قهوه اسپرسو , price : 20000  , cost : 15000
+Name : امیر, product : اسپرسو دوبل , price : 30000  , cost : 20000
+Name : هادی, product : اسپرسو دوبل , price : 30000  , cost : 20000

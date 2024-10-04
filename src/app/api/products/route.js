@@ -3,9 +3,9 @@ import path from "path";
 
 export async function POST(req) {
   try {
-    const { nameOfProduct, materials, price } = await req.json();
+    const { nameOfProduct, materials, price,cost } = await req.json();
     const filePath = path.join(process.cwd(), "data", "products.txt");
-    const productData = ` Product: ${nameOfProduct} , materials: ${materials} , price : ${price}\n`;
+    const productData = ` Product: ${nameOfProduct} , materials: ${materials} , price : ${price} , cost : ${cost}\n`;
     const dirPath = path.dirname(filePath);
     await fs.mkdir(dirPath, { recursive: true });
 
@@ -29,11 +29,12 @@ export async function POST(req) {
     await fs.access(filePath)
     const data = await fs.readFile(filePath, 'utf-8');
     const products = data.split('\n').filter(line => line).map(line => {
-      const [product, materialsPart,pricePart] = line?.split(', ');
+      const [product, materialsPart,pricePart,costPart] = line?.split(', ');
     return {
       product: product.split(': ')[1],
       materials: materialsPart.split(': ')[1],
       price: pricePart.split(': ')[1],
+      cost: costPart.split(': ')[1],
     }
     })
     return new Response(JSON.stringify(products), { status: 200 });
