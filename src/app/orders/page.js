@@ -8,9 +8,10 @@ export default function page() {
   const [price, setPrice] = useState("");
   const [users, setUsers] = useState([]);
   const [orders, setOrders] = useState([]);
+  const [cost, setCost] = useState("");
 
   const addOrder = async () => {
-    const order = { name, product, price };
+    const order = { name, product, price, cost };
     const res = await fetch("/api/orders", {
       method: "POST",
       headers: {
@@ -23,7 +24,7 @@ export default function page() {
       setName("");
       setPrice("");
       setProduct("");
-      router.refresh()
+      router.refresh();
     }
   };
 
@@ -47,14 +48,14 @@ export default function page() {
     });
 
     setPrice(data[0]?.price);
+    setCost(data[0]?.cost);
   };
 
-  console.log("price", price);
   return (
-    <div>
+    <div className=" items-center flex ">
       <form
         action=""
-        className="flex flex-col w-4/6  border-4 border-amber-700 p-4 mt-4"
+        className="flex flex-col w-4/6 h-full justify-center mx-auto border-4 border-amber-700 p-4 mt-4"
         onSubmit={addOrder}
       >
         <div className=" flex flex-col ">

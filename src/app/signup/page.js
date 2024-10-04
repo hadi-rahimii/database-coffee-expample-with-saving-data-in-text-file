@@ -26,8 +26,8 @@ export default function page() {
   
     }
   return (
-    <div>
-      <form className="flex flex-col w-4/6 h-full border-4 border-amber-700 p-4 mt-4" onSubmit={addUser}>
+    <div  className=" items-center flex"> 
+      <form className="flex flex-col w-4/6 h-full justify-center mx-auto border-4 border-amber-700 p-4 mt-4" onSubmit={addUser}>
         <div className=" flex flex-col ">
           <label htmlFor="" className=" right-0 my-2 text-xl">
             {" "}
